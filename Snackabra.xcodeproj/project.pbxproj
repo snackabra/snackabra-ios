@@ -1,0 +1,766 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBAA23A5BCA591055A1E24C1 /* Pods_Snackabra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA0EB47AA76638AAC16B966 /* Pods_Snackabra.framework */; };
+		D30F28C9278F622500D34395 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F28C8278F622500D34395 /* RoomTableViewCell.swift */; };
+		D30F28CC278F667E00D34395 /* RoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F28CB278F667D00D34395 /* RoomsTableViewController.swift */; };
+		D30F28D3278FA6A100D34395 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F28D2278FA6A100D34395 /* ChatViewController.swift */; };
+		D30F28D6278FAF2200D34395 /* MessageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F28D5278FAF2200D34395 /* MessageDataSource.swift */; };
+		D30F28D8278FAF3600D34395 /* MessageCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F28D7278FAF3600D34395 /* MessageCellDelegate.swift */; };
+		D30F28DA278FAF4500D34395 /* MessageDisplayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F28D9278FAF4500D34395 /* MessageDisplayDelegate.swift */; };
+		D30F28DC278FAF5500D34395 /* MessageLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F28DB278FAF5500D34395 /* MessageLayoutDelegate.swift */; };
+		D30F28DE278FAF6000D34395 /* InputBarAccessoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F28DD278FAF6000D34395 /* InputBarAccessoryViewDelegate.swift */; };
+		D30F28E02790A82300D34395 /* MessageKitDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F28DF2790A82300D34395 /* MessageKitDefaults.swift */; };
+		D30F28E42790B04500D34395 /* MKMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F28E32790B04500D34395 /* MKMessage.swift */; };
+		D30F28E82792083C00D34395 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F28E72792083C00D34395 /* Crypto.swift */; };
+		D321542A27AAFC3500945AB1 /* ConfigurationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321542927AAFC3500945AB1 /* ConfigurationsController.swift */; };
+		D3251CBD2787CB1100F9A791 /* KeyImportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3251CBC2787CB1100F9A791 /* KeyImportController.swift */; };
+		D32ACCED27A780CA008EB78B /* KeyExportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32ACCEC27A780CA008EB78B /* KeyExportController.swift */; };
+		D32F212527A45BA300DC30CA /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F212427A45BA300DC30CA /* NotificationService.swift */; };
+		D32F212927A45BA300DC30CA /* snackabraNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D32F212227A45BA300DC30CA /* snackabraNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D37BAD522799E72F00C75295 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37BAD512799E72F00C75295 /* Utils.swift */; };
+		D37BAD54279B327000C75295 /* DataFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37BAD53279B327000C75295 /* DataFunctions.swift */; };
+		D3DB05BE27A3122200842912 /* RoomSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB05BD27A3122200842912 /* RoomSettingsViewController.swift */; };
+		D3E9EA3527A4A78900F45E7A /* Snackabra.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3E9EA3327A4A78900F45E7A /* Snackabra.xcdatamodeld */; };
+		D3E9EA3627A4A78900F45E7A /* Snackabra.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3E9EA3327A4A78900F45E7A /* Snackabra.xcdatamodeld */; };
+		D3EFD16B27A1E77B00526F94 /* GalleryControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFD16A27A1E77B00526F94 /* GalleryControllerDelegate.swift */; };
+		D3EFD16D27A1E7D900526F94 /* WebsocketDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFD16C27A1E7D900526F94 /* WebsocketDelegate.swift */; };
+		D3FF4B35278658E00011AEAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF4B34278658E00011AEAA /* AppDelegate.swift */; };
+		D3FF4B37278658E00011AEAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF4B36278658E00011AEAA /* SceneDelegate.swift */; };
+		D3FF4B39278658E00011AEAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF4B38278658E00011AEAA /* ViewController.swift */; };
+		D3FF4B3C278658E00011AEAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FF4B3A278658E00011AEAA /* Main.storyboard */; };
+		D3FF4B3E278658E10011AEAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FF4B3D278658E10011AEAA /* Assets.xcassets */; };
+		D3FF4B41278658E10011AEAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FF4B3F278658E10011AEAA /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D32F212727A45BA300DC30CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3FF4B29278658E00011AEAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D32F212127A45BA300DC30CA;
+			remoteInfo = snackabraNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D33E5AF727A3C42400BD7FF2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D32F212927A45BA300DC30CA /* snackabraNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		043FBAB93AE14F7C82149B22 /* Pods-Snackabra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snackabra.debug.xcconfig"; path = "Target Support Files/Pods-Snackabra/Pods-Snackabra.debug.xcconfig"; sourceTree = "<group>"; };
+		6EA0EB47AA76638AAC16B966 /* Pods_Snackabra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snackabra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9924805D1D0783140392DACD /* Pods-Snackabra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snackabra.release.xcconfig"; path = "Target Support Files/Pods-Snackabra/Pods-Snackabra.release.xcconfig"; sourceTree = "<group>"; };
+		D30F28C8278F622500D34395 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
+		D30F28CB278F667D00D34395 /* RoomsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableViewController.swift; sourceTree = "<group>"; };
+		D30F28D2278FA6A100D34395 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		D30F28D5278FAF2200D34395 /* MessageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDataSource.swift; sourceTree = "<group>"; };
+		D30F28D7278FAF3600D34395 /* MessageCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellDelegate.swift; sourceTree = "<group>"; };
+		D30F28D9278FAF4500D34395 /* MessageDisplayDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDisplayDelegate.swift; sourceTree = "<group>"; };
+		D30F28DB278FAF5500D34395 /* MessageLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLayoutDelegate.swift; sourceTree = "<group>"; };
+		D30F28DD278FAF6000D34395 /* InputBarAccessoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBarAccessoryViewDelegate.swift; sourceTree = "<group>"; };
+		D30F28DF2790A82300D34395 /* MessageKitDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageKitDefaults.swift; sourceTree = "<group>"; };
+		D30F28E32790B04500D34395 /* MKMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMessage.swift; sourceTree = "<group>"; };
+		D30F28E72792083C00D34395 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		D316BD8427A4774C00BB755E /* snackabraNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = snackabraNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
+		D321542927AAFC3500945AB1 /* ConfigurationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationsController.swift; sourceTree = "<group>"; };
+		D3251CBC2787CB1100F9A791 /* KeyImportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyImportController.swift; sourceTree = "<group>"; };
+		D32ACCEC27A780CA008EB78B /* KeyExportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyExportController.swift; sourceTree = "<group>"; };
+		D32F212227A45BA300DC30CA /* snackabraNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = snackabraNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D32F212427A45BA300DC30CA /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		D32F212627A45BA300DC30CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D33E5AE027A35AB600BD7FF2 /* Snackabra.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Snackabra.entitlements; sourceTree = "<group>"; };
+		D33E5AE627A3C42400BD7FF2 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		D33E5AE827A3C42400BD7FF2 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		D37BAD512799E72F00C75295 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D37BAD53279B327000C75295 /* DataFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFunctions.swift; sourceTree = "<group>"; };
+		D3DB05BD27A3122200842912 /* RoomSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSettingsViewController.swift; sourceTree = "<group>"; };
+		D3E9EA3427A4A78900F45E7A /* Snackabra.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Snackabra.xcdatamodel; sourceTree = "<group>"; };
+		D3EFD16A27A1E77B00526F94 /* GalleryControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryControllerDelegate.swift; sourceTree = "<group>"; };
+		D3EFD16C27A1E7D900526F94 /* WebsocketDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsocketDelegate.swift; sourceTree = "<group>"; };
+		D3FF4B31278658E00011AEAA /* Snackabra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snackabra.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3FF4B34278658E00011AEAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D3FF4B36278658E00011AEAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D3FF4B38278658E00011AEAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D3FF4B3B278658E00011AEAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D3FF4B3D278658E10011AEAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3FF4B40278658E10011AEAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3FF4B42278658E10011AEAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D32F211F27A45BA300DC30CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FF4B2E278658E00011AEAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBAA23A5BCA591055A1E24C1 /* Pods_Snackabra.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2809D55BEAB8EB4B991A740C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EA0EB47AA76638AAC16B966 /* Pods_Snackabra.framework */,
+				D33E5AE627A3C42400BD7FF2 /* UserNotifications.framework */,
+				D33E5AE827A3C42400BD7FF2 /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3826AE8FB48EF68856902072 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				043FBAB93AE14F7C82149B22 /* Pods-Snackabra.debug.xcconfig */,
+				9924805D1D0783140392DACD /* Pods-Snackabra.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D30F28C7278F61D000D34395 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				D30F28C8278F622500D34395 /* RoomTableViewCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		D30F28CA278F665300D34395 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				D30F28CB278F667D00D34395 /* RoomsTableViewController.swift */,
+				D32ACCEC27A780CA008EB78B /* KeyExportController.swift */,
+				D3251CBC2787CB1100F9A791 /* KeyImportController.swift */,
+				D321542927AAFC3500945AB1 /* ConfigurationsController.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		D30F28D1278FA68A00D34395 /* SecondaryViews */ = {
+			isa = PBXGroup;
+			children = (
+				D30F28D2278FA6A100D34395 /* ChatViewController.swift */,
+				D30F28D4278FAF0600D34395 /* ChatViewExtensions */,
+				D3DB05BD27A3122200842912 /* RoomSettingsViewController.swift */,
+			);
+			path = SecondaryViews;
+			sourceTree = "<group>";
+		};
+		D30F28D4278FAF0600D34395 /* ChatViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				D30F28D5278FAF2200D34395 /* MessageDataSource.swift */,
+				D30F28D7278FAF3600D34395 /* MessageCellDelegate.swift */,
+				D30F28D9278FAF4500D34395 /* MessageDisplayDelegate.swift */,
+				D30F28DB278FAF5500D34395 /* MessageLayoutDelegate.swift */,
+				D30F28DD278FAF6000D34395 /* InputBarAccessoryViewDelegate.swift */,
+				D3EFD16A27A1E77B00526F94 /* GalleryControllerDelegate.swift */,
+				D3EFD16C27A1E7D900526F94 /* WebsocketDelegate.swift */,
+			);
+			path = ChatViewExtensions;
+			sourceTree = "<group>";
+		};
+		D30F28E22790A83300D34395 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D30F28DF2790A82300D34395 /* MessageKitDefaults.swift */,
+				D30F28E72792083C00D34395 /* Crypto.swift */,
+				D37BAD512799E72F00C75295 /* Utils.swift */,
+				D37BAD53279B327000C75295 /* DataFunctions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D3251CB92787997200F9A791 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D30F28E32790B04500D34395 /* MKMessage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D32F212327A45BA300DC30CA /* snackabraNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D316BD8427A4774C00BB755E /* snackabraNotificationServiceExtension.entitlements */,
+				D32F212427A45BA300DC30CA /* NotificationService.swift */,
+				D32F212627A45BA300DC30CA /* Info.plist */,
+			);
+			path = snackabraNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		D3FF4B28278658E00011AEAA = {
+			isa = PBXGroup;
+			children = (
+				D3FF4B33278658E00011AEAA /* Snackabra */,
+				D32F212327A45BA300DC30CA /* snackabraNotificationServiceExtension */,
+				D3FF4B32278658E00011AEAA /* Products */,
+				3826AE8FB48EF68856902072 /* Pods */,
+				2809D55BEAB8EB4B991A740C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D3FF4B32278658E00011AEAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3FF4B31278658E00011AEAA /* Snackabra.app */,
+				D32F212227A45BA300DC30CA /* snackabraNotificationServiceExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3FF4B33278658E00011AEAA /* Snackabra */ = {
+			isa = PBXGroup;
+			children = (
+				D33E5AE027A35AB600BD7FF2 /* Snackabra.entitlements */,
+				D30F28D1278FA68A00D34395 /* SecondaryViews */,
+				D30F28CA278F665300D34395 /* MainViews */,
+				D30F28C7278F61D000D34395 /* CustomCells */,
+				D3251CB92787997200F9A791 /* Models */,
+				D30F28E22790A83300D34395 /* Helpers */,
+				D3FF4B38278658E00011AEAA /* ViewController.swift */,
+				D3FF4B34278658E00011AEAA /* AppDelegate.swift */,
+				D3FF4B36278658E00011AEAA /* SceneDelegate.swift */,
+				D3FF4B3A278658E00011AEAA /* Main.storyboard */,
+				D3FF4B3D278658E10011AEAA /* Assets.xcassets */,
+				D3FF4B3F278658E10011AEAA /* LaunchScreen.storyboard */,
+				D3FF4B42278658E10011AEAA /* Info.plist */,
+				D3E9EA3327A4A78900F45E7A /* Snackabra.xcdatamodeld */,
+			);
+			path = Snackabra;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D32F212127A45BA300DC30CA /* snackabraNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D32F212A27A45BA300DC30CA /* Build configuration list for PBXNativeTarget "snackabraNotificationServiceExtension" */;
+			buildPhases = (
+				D32F211E27A45BA300DC30CA /* Sources */,
+				D32F211F27A45BA300DC30CA /* Frameworks */,
+				D32F212027A45BA300DC30CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = snackabraNotificationServiceExtension;
+			productName = snackabraNotificationServiceExtension;
+			productReference = D32F212227A45BA300DC30CA /* snackabraNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		D3FF4B30278658E00011AEAA /* Snackabra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3FF4B45278658E10011AEAA /* Build configuration list for PBXNativeTarget "Snackabra" */;
+			buildPhases = (
+				9E3A7C618E451E2FDB15104A /* [CP] Check Pods Manifest.lock */,
+				D3FF4B2D278658E00011AEAA /* Sources */,
+				D3FF4B2E278658E00011AEAA /* Frameworks */,
+				D3FF4B2F278658E00011AEAA /* Resources */,
+				FE52896B1B2CCE7D1D3E5ECB /* [CP] Embed Pods Frameworks */,
+				D33E5AF727A3C42400BD7FF2 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D32F212827A45BA300DC30CA /* PBXTargetDependency */,
+			);
+			name = Snackabra;
+			packageProductDependencies = (
+			);
+			productName = Snackabra;
+			productReference = D3FF4B31278658E00011AEAA /* Snackabra.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3FF4B29278658E00011AEAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					D32F212127A45BA300DC30CA = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					D3FF4B30278658E00011AEAA = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = D3FF4B2C278658E00011AEAA /* Build configuration list for PBXProject "Snackabra" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3FF4B28278658E00011AEAA;
+			packageReferences = (
+			);
+			productRefGroup = D3FF4B32278658E00011AEAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3FF4B30278658E00011AEAA /* Snackabra */,
+				D32F212127A45BA300DC30CA /* snackabraNotificationServiceExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D32F212027A45BA300DC30CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FF4B2F278658E00011AEAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FF4B41278658E10011AEAA /* LaunchScreen.storyboard in Resources */,
+				D3FF4B3E278658E10011AEAA /* Assets.xcassets in Resources */,
+				D3FF4B3C278658E00011AEAA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9E3A7C618E451E2FDB15104A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Snackabra-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE52896B1B2CCE7D1D3E5ECB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Snackabra/Pods-Snackabra-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Snackabra/Pods-Snackabra-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Snackabra/Pods-Snackabra-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D32F211E27A45BA300DC30CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3E9EA3627A4A78900F45E7A /* Snackabra.xcdatamodeld in Sources */,
+				D32F212527A45BA300DC30CA /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FF4B2D278658E00011AEAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D30F28CC278F667E00D34395 /* RoomsTableViewController.swift in Sources */,
+				D30F28DA278FAF4500D34395 /* MessageDisplayDelegate.swift in Sources */,
+				D3FF4B39278658E00011AEAA /* ViewController.swift in Sources */,
+				D3FF4B35278658E00011AEAA /* AppDelegate.swift in Sources */,
+				D321542A27AAFC3500945AB1 /* ConfigurationsController.swift in Sources */,
+				D3E9EA3527A4A78900F45E7A /* Snackabra.xcdatamodeld in Sources */,
+				D30F28DE278FAF6000D34395 /* InputBarAccessoryViewDelegate.swift in Sources */,
+				D3DB05BE27A3122200842912 /* RoomSettingsViewController.swift in Sources */,
+				D37BAD54279B327000C75295 /* DataFunctions.swift in Sources */,
+				D30F28E02790A82300D34395 /* MessageKitDefaults.swift in Sources */,
+				D30F28E42790B04500D34395 /* MKMessage.swift in Sources */,
+				D30F28D6278FAF2200D34395 /* MessageDataSource.swift in Sources */,
+				D32ACCED27A780CA008EB78B /* KeyExportController.swift in Sources */,
+				D30F28DC278FAF5500D34395 /* MessageLayoutDelegate.swift in Sources */,
+				D30F28D8278FAF3600D34395 /* MessageCellDelegate.swift in Sources */,
+				D30F28C9278F622500D34395 /* RoomTableViewCell.swift in Sources */,
+				D30F28E82792083C00D34395 /* Crypto.swift in Sources */,
+				D3EFD16B27A1E77B00526F94 /* GalleryControllerDelegate.swift in Sources */,
+				D37BAD522799E72F00C75295 /* Utils.swift in Sources */,
+				D3251CBD2787CB1100F9A791 /* KeyImportController.swift in Sources */,
+				D3EFD16D27A1E7D900526F94 /* WebsocketDelegate.swift in Sources */,
+				D30F28D3278FA6A100D34395 /* ChatViewController.swift in Sources */,
+				D3FF4B37278658E00011AEAA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D32F212827A45BA300DC30CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D32F212127A45BA300DC30CA /* snackabraNotificationServiceExtension */;
+			targetProxy = D32F212727A45BA300DC30CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D3FF4B3A278658E00011AEAA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3FF4B3B278658E00011AEAA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D3FF4B3F278658E10011AEAA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3FF4B40278658E10011AEAA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D32F212B27A45BA300DC30CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = snackabraNotificationServiceExtension/snackabraNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = BFX746944J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = snackabraNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.snackabra.NotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D32F212C27A45BA300DC30CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = snackabraNotificationServiceExtension/snackabraNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = BFX746944J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = snackabraNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.snackabra.NotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D3FF4B43278658E10011AEAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D3FF4B44278658E10011AEAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3FF4B46278658E10011AEAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 043FBAB93AE14F7C82149B22 /* Pods-Snackabra.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Snackabra/Snackabra.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = BFX746944J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Snackabra/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"Allow Snackabra to access camera if you want to click pictures from the app and share\"";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Snackabra does not access your location, but we use a library\n\tthat has the *option* of embedding location metadata if you take a photo\n\tdirectly with the app. We do not request that information however.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "\"Allow Snackabra to access photos if you want to share them!\"";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.7;
+				PRODUCT_BUNDLE_IDENTIFIER = app.snackabra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3FF4B47278658E10011AEAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9924805D1D0783140392DACD /* Pods-Snackabra.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Snackabra/Snackabra.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = BFX746944J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Snackabra/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"Allow Snackabra to access camera if you want to click pictures from the app and share\"";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Snackabra does not access your location, but we use a library\n\tthat has the *option* of embedding location metadata if you take a photo\n\tdirectly with the app. We do not request that information however.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "\"Allow Snackabra to access photos if you want to share them!\"";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.7;
+				PRODUCT_BUNDLE_IDENTIFIER = app.snackabra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D32F212A27A45BA300DC30CA /* Build configuration list for PBXNativeTarget "snackabraNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D32F212B27A45BA300DC30CA /* Debug */,
+				D32F212C27A45BA300DC30CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3FF4B2C278658E00011AEAA /* Build configuration list for PBXProject "Snackabra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FF4B43278658E10011AEAA /* Debug */,
+				D3FF4B44278658E10011AEAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3FF4B45278658E10011AEAA /* Build configuration list for PBXNativeTarget "Snackabra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FF4B46278658E10011AEAA /* Debug */,
+				D3FF4B47278658E10011AEAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D3E9EA3327A4A78900F45E7A /* Snackabra.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D3E9EA3427A4A78900F45E7A /* Snackabra.xcdatamodel */,
+			);
+			currentVersion = D3E9EA3427A4A78900F45E7A /* Snackabra.xcdatamodel */;
+			path = Snackabra.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D3FF4B29278658E00011AEAA /* Project object */;
+}

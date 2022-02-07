@@ -1,0 +1,31 @@
+PODS:
+  - Gallery (2.4.0)
+  - InputBarAccessoryView (5.4.0):
+    - InputBarAccessoryView/Core (= 5.4.0)
+  - InputBarAccessoryView/Core (5.4.0)
+  - MessageKit (3.7.0):
+    - InputBarAccessoryView (~> 5.4.0)
+  - SKPhotoBrowser (7.0.0)
+
+DEPENDENCIES:
+  - Gallery
+  - InputBarAccessoryView
+  - MessageKit
+  - SKPhotoBrowser
+
+SPEC REPOS:
+  trunk:
+    - Gallery
+    - InputBarAccessoryView
+    - MessageKit
+    - SKPhotoBrowser
+
+SPEC CHECKSUMS:
+  Gallery: b7fc1aeb68a39ad6d2c423574750196bf9b25e5c
+  InputBarAccessoryView: 74d471ab1fa1736806be50328df79257e52865a9
+  MessageKit: 8e76dd8d65ad44b49e1651c673497146416461e9
+  SKPhotoBrowser: 6aaa8f232752e87c7e76bace183bead0a137097d
+
+PODFILE CHECKSUM: 77d06d17e1d8e17049a22df49051cd4c189ea230
+
+COCOAPODS: 1.11.2
