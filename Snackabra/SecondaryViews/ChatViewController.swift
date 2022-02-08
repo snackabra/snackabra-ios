@@ -54,6 +54,11 @@ class ChatViewController: MessagesViewController {
         self.roomName = roomName;
         self.currentUser.displayName = username;
         self.container = container;
+        if let config = getConfig(container: self.container) {
+            self.config = config;
+        } else {
+            showConfigError();
+        }
         setupWebsocket();
     }
     
@@ -70,12 +75,6 @@ class ChatViewController: MessagesViewController {
         configureMessageCollectionView();
         configureMessageInputBar();
         // Do any additional setup after loading the view.
-        
-        if let config = getConfig(container: self.container) {
-            self.config = config;
-        } else {
-            showConfigError();
-        }
         importPersonalKeys();
         loadContacts();
         joinRoom();
@@ -246,7 +245,7 @@ class ChatViewController: MessagesViewController {
     
     func setupWebsocket() {
         self.urlSession = URLSession(configuration: .default, delegate: self, delegateQueue: OperationQueue())
-        self.websocket = self.urlSession?.webSocketTask(with: URL(string: "wss://\(self.config["roomServer"])/api/room/\(roomId)/websocket")!);
+        self.websocket = self.urlSession?.webSocketTask(with: URL(string: "wss://\(self.config["roomServer"]!)/api/room/\(roomId)/websocket")!);
     }
     
     func joinRoom() {
@@ -563,7 +562,7 @@ class ChatViewController: MessagesViewController {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if refreshController.isRefreshing, self.moreMessages {
-            if let url = URL(string: "https://\(self.config["roomServer"])/api/room/\(self.roomId)/oldMessages?currentMessagesLength=\(self.mkMessages.count)"){
+            if let url = URL(string: "https://\(self.config["roomServer"]!)/api/room/\(self.roomId)/oldMessages?currentMessagesLength=\(self.mkMessages.count)"){
                 let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
                     guard let data = data else { return }
                     if let datastr = String(data: data, encoding: .utf8), let jsonResp = JSONParse(jsonString: datastr) {
@@ -740,7 +739,7 @@ class ChatViewController: MessagesViewController {
     func storeData(data: Data, dataId: String, dataKey: String, dataType: String) async {
         print("In store data")
         var returnDict: [String : String] = [:];
-        if let url = URL(string: "https://\(self.config["storageServer"])/api/v1/storeRequest?name=\(dataId)") {
+        if let url = URL(string: "https://\(self.config["storageServer"]!)/api/v1/storeRequest?name=\(dataId)") {
             let task = URLSession.shared.dataTask(with: url) {(requestData, response, error) in
                 guard let requestData = requestData else {
                     // print("Could not fetch encryption data");
@@ -756,7 +755,7 @@ class ChatViewController: MessagesViewController {
                 if let iv = extractedData["iv"], let salt = extractedData["salt"], let key = getDataKey(imageHash: dataKey, salt: salt) {
                     let encryptedData = encrypt(contents: data, key: key, outputType: "Data", _iv: iv);
                     // print("ENCRYPTED DATA: ", encryptedData)
-                    if let socketURL = URL(string: "https://\(self.config["roomServer"])/api/room/\(self.roomId)/storageRequest?size=\(encryptedData.count)") {
+                    if let socketURL = URL(string: "https://\(self.config["roomServer"]!)/api/room/\(self.roomId)/storageRequest?size=\(encryptedData.count)") {
                         let storageTokenTask = URLSession.shared.dataTask(with: socketURL) {(storageData, storageResponse, storageError) in
                             guard let storageData = storageData else {
                                 // print("Could not fetch storage token data")
@@ -778,7 +777,7 @@ class ChatViewController: MessagesViewController {
                                 48,
                                 &vidBytes
                             )
-                            if let storageUrl = URL(string: "https://\(self.config["storageServer"])/api/v1/storeData?type=\(dataType)&key=\(dataId.addingPercentEncoding(withAllowedCharacters: allowedCharSet.js)!)"), let contents = encryptedData["content"] as? Data, let storageToken = storageTokenString!.data(using: .utf8), status == errSecSuccess {
+                            if let storageUrl = URL(string: "https://\(self.config["storageServer"]!)/api/v1/storeData?type=\(dataType)&key=\(dataId.addingPercentEncoding(withAllowedCharacters: allowedCharSet.js)!)"), let contents = encryptedData["content"] as? Data, let storageToken = storageTokenString!.data(using: .utf8), status == errSecSuccess {
                                 let vidData = Data(bytes: vidBytes, count: 48)
                                 let postBody = assemblePayload(data: ["iv": iv, "salt": salt, "image": contents, "storageToken": storageToken, "vid": vidData])
                                 var postRequest = URLRequest(url: storageUrl)

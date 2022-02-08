@@ -28,6 +28,11 @@ class RoomsTableViewController: UITableViewController {
         if self.container == nil {
             fatalError("This view needs a persistent container.")
         }
+        if let config = getConfig(container: self.container) {
+            self.config = config;
+        } else {
+            showConfigError();
+        }
         self.tableView.refreshControl = self.refreshController;
         self.refreshController.addTarget(self, action: #selector(reloadRooms), for: .valueChanged)
         let newRoomButton = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(showNewRoomAlert))
@@ -35,11 +40,6 @@ class RoomsTableViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = newRoomButton;
         tableView.tableFooterView = UIView();
         reloadRooms();
-        if let config = getConfig(container: self.container) {
-            self.config = config;
-        } else {
-            showConfigError();
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -96,7 +96,7 @@ class RoomsTableViewController: UITableViewController {
         self.allRooms.forEach {
             self.lastMessageTime[$0.value(forKey: "roomId") as! String] = 0;
         }
-        if let url = URL(string: "https://\(self.config["roomServer"])/api/v1/getLastMessageTimes"), let postBody = try? JSONSerialization.data(withJSONObject: roomList, options: []) {
+        if let url = URL(string: "https://\(self.config["roomServer"]!)/api/v1/getLastMessageTimes"), let postBody = try? JSONSerialization.data(withJSONObject: roomList, options: []) {
             var postRequest = URLRequest(url: url)
             postRequest.httpMethod = "POST";
             postRequest.httpBody = postBody

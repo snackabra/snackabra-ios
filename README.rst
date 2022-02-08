@@ -55,6 +55,12 @@ might need to manually laod packages for:
   * https://github.com/suzuki-0000/SKPhotoBrowser
     'Up to Next Major': 7.0.0
 
+If you're a maintaniner, to push through fastlane to Apple:
+
+::
+
+   fastlane beta
+
 
 Setup
 -----
