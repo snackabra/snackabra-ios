@@ -10,7 +10,6 @@ Snackabra iOS App
 For general documentation on Snackabra see:
 
 * https://snackabra.io
-* https://snackabra.github.org
 
 If you would like to contribute or help out with the snackabra
 project, please feel free to reach out to us at snackabra@gmail.com or
@@ -23,6 +22,9 @@ Introduction
 This is a template / reference iOS app for snackabra chat client.
 The web app (https://github.com/snackabra/snackabra-webclient)
 is (probably) more feature complete.
+
+If you would like to join the beta program, just email us;
+it's not on the app store yet.
 
 
 Preliminaries
