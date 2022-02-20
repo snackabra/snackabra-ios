@@ -52,7 +52,11 @@ class KeyExportController: UITableViewController {
     func prepareKeyExport() {
         let allRooms = getCoreData(container: self.container, entityName: "Room", predicate: nil, sortDescriptors: nil);
         var exportData : [String: Any] = [:];
-        let user = getCoreData(container: self.container, entityName: "User", predicate: NSPredicate(format: "id = 1"), sortDescriptors: nil)?[0];
+        let users = getCoreData(container: self.container, entityName: "User", predicate: NSPredicate(format: "id = 1"), sortDescriptors: nil);
+        var user : NSManagedObject?
+        if users?.count == 1 {
+            user = users?[0];
+        }
         if let contacts = user?.value(forKey: "contacts") as? String {
             exportData["contacts"] = JSONParse(jsonString: contacts);
         }

@@ -31,6 +31,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let container = self.persistentContainer
+        if let user = getCoreData(container: container, entityName: "User", predicate: NSPredicate(format: "id = 1"), sortDescriptors: nil), user.count == 0 {
+            var user: NSManagedObject? = nil;
+            let args: [String: Any] = ["id": 1, "contacts": "", "roomServer": "s_socket.privacy.app", "storageServer": "s4.privacy.app"];
+            putCoreData(container: container, entityName: "User", args: args, mo: user)
+        }
         registerForPushNotifications()
         UNUserNotificationCenter.current().delegate = self
         return true
