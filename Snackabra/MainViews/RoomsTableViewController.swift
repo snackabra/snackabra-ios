@@ -32,6 +32,7 @@ class RoomsTableViewController: UITableViewController {
             self.config = config;
         } else {
             showConfigError();
+            return;
         }
         self.tableView.refreshControl = self.refreshController;
         self.refreshController.addTarget(self, action: #selector(reloadRooms), for: .valueChanged)
@@ -231,6 +232,8 @@ class RoomsTableViewController: UITableViewController {
         let saveAction = UIAlertAction(title: "Ok", style: .default) { [unowned ac] _ in
             updateUI {
                 self.dismiss(animated: true, completion: nil)
+                // Navigate to settings tab
+                self.tabBarController?.selectedIndex = 1
             }
         }
         ac.addAction(saveAction);
