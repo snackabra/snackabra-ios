@@ -6,9 +6,9 @@
 	<string>development</string>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:s4.privacy.app</string>
-		<string>applinks:snackabra.app</string>
-		<string>applinks:s.privacy.app</string>
+		<string>applinks:channel.384.dev</string>
+		<string>applinks:preview.384chat.pages.dev</string>
+		<string>applinks:storage.384.dev</string>
 	</array>
 	<key>com.apple.security.application-groups</key>
 	<array>

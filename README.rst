@@ -50,7 +50,7 @@ This is an early release. It works. But much left to do.
    open Snackabra.xcworkspace
 
 Gallery (2.4.0+) should come with pod install, but you
-might need to manually laod packages for:
+might need to manually load packages for:
 
   * https://github.com/MessageKit/MessageKit
     'Up to Next Major': 3.7.0
